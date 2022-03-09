@@ -35,6 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   double hasilPerhitungan = 0;
   List<String> listHasil = [];
 
+  Object get value => null;
+
   void onDropdownChange(Object value) {
     return setState(() {
       selectedDropdown = value.toString();
@@ -92,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(value),
                 );
               }).toList(),
-              onChanged: (value) {
+              onChanged: (dropdownOnChanged) {
                 onDropdownChange(value);
               },
             ),
